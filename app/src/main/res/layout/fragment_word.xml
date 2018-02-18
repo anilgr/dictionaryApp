@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.apps.anilgr.simpledictionary.MainActivity">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="1dp"
+            android:orientation="vertical"
+            android:padding="16dp"
+            tools:context="com.apps.anilgr.simpledictionary.MainActivity">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/word"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingBottom="16dp"
+                    android:text="wordopathy"
+                    android:textColor="#00c7ce"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <ToggleButton
+                    android:id="@+id/toggleButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:background="@android:color/transparent"
+                    android:button="@drawable/bookmark_toggle"
+                    android:textOff=""
+                    android:textOn="" />
+            </LinearLayout>
+
+            <uk.co.androidalliance.edgeeffectoverride.ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="false"
+                android:filterTouchesWhenObscured="false"
+                android:isScrollContainer="true"
+                android:scrollbars="none"
+                app:edgeeffect_color="#BBBFC3">
+
+                <TextView
+                    android:id="@+id/meaning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="noun this is the meaning of the above word\nadj this is the meaning of the above word\nadv this is the meaning of the above word"
+                    android:textSize="18sp" />
+
+            </uk.co.androidalliance.edgeeffectoverride.ScrollView>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>
